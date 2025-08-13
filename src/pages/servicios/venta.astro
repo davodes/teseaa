@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { ShoppingCart, Star, Zap, Shield, Award, CheckCircle } from 'lucide-astro';
+---
+
+<BaseLayout 
+  title="Venta de Equipos de Aire Acondicionado"
+  description="Amplia gama de equipos de aire acondicionado de las mejores marcas. Precios competitivos, garantía oficial y asesoramiento personalizado."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-600 to-secondary-600">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+          <div class="animate-on-scroll">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Venta de Equipos</h1>
+            <p class="text-xl text-gray-200 mb-8">
+              Encuentra el equipo de aire acondicionado perfecto para tu hogar o empresa. 
+              Trabajamos con las mejores marcas y ofrecemos precios competitivos.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#productos" class="btn-accent text-lg px-8 py-4">Ver Catálogo</a>
+              <a href="#contacto" class="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4">
+                Solicitar Presupuesto
+              </a>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="glass rounded-2xl p-8 text-center">
+              <ShoppingCart class="w-16 h-16 text-accent-400 mx-auto mb-4" />
+              <h3 class="text-2xl font-bold mb-4">Precios desde</h3>
+              <div class="text-5xl font-bold text-accent-400 mb-2">299€</div>
+              <p class="text-gray-200">IVA incluido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Marcas Oficiales</h2>
+          <p class="text-xl text-gray-600">Trabajamos con las marcas más reconocidas del mercado</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70">
+          <div class="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="text-2xl font-bold text-gray-700">Daikin</div>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="text-2xl font-bold text-gray-700">Mitsubishi</div>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="text-2xl font-bold text-gray-700">LG</div>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="text-2xl font-bold text-gray-700">Samsung</div>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="text-2xl font-bold text-gray-700">Panasonic</div>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="text-2xl font-bold text-gray-700">Fujitsu</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section-padding bg-gray-50" id="productos">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Catálogo de Productos</h2>
+          <p class="text-xl text-gray-600">Encuentra el equipo perfecto para tus necesidades</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Split Doméstico -->
+          <div class="card p-6 animate-on-scroll">
+            <div class="w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg mb-6 flex items-center justify-center">
+              <Zap class="w-16 h-16 text-blue-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Split Doméstico</h3>
+            <p class="text-gray-600 mb-4">Perfectos para habitaciones y espacios pequeños. Eficiencia energética A++ y tecnología inverter.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-primary-600">Desde 299€</span>
+              <div class="flex items-center space-x-1">
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+              </div>
+            </div>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Potencia: 2.5 - 7 kW</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Eficiencia A++</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Función frío/calor</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Control remoto WiFi</span>
+              </li>
+            </ul>
+            <button class="btn-primary w-full">Ver Modelos</button>
+          </div>
+
+          <!-- Multi Split -->
+          <div class="card p-6 animate-on-scroll">
+            <div class="w-full h-48 bg-gradient-to-br from-green-100 to-green-200 rounded-lg mb-6 flex items-center justify-center">
+              <Shield class="w-16 h-16 text-green-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Multi Split</h3>
+            <p class="text-gray-600 mb-4">Una unidad exterior para múltiples interiores. Ideal para viviendas y oficinas grandes.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-primary-600">Desde 899€</span>
+              <div class="flex items-center space-x-1">
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+              </div>
+            </div>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>2-5 unidades interiores</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Control independiente</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Ahorro energético</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Instalación optimizada</span>
+              </li>
+            </ul>
+            <button class="btn-primary w-full">Ver Modelos</button>
+          </div>
+
+          <!-- Conductos -->
+          <div class="card p-6 animate-on-scroll">
+            <div class="w-full h-48 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg mb-6 flex items-center justify-center">
+              <Award class="w-16 h-16 text-purple-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Por Conductos</h3>
+            <p class="text-gray-600 mb-4">Climatización centralizada invisible. Perfecto para reformas y nuevas construcciones.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-primary-600">Desde 1.299€</span>
+              <div class="flex items-center space-x-1">
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+                <Star class="w-4 h-4 text-yellow-400 fill-current" />
+              </div>
+            </div>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Integración arquitectónica</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Distribución uniforme</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Control por zonas</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span>Bajo nivel sonoro</span>
+              </li>
+            </ul>
+            <button class="btn-primary w-full">Ver Modelos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Por Qué Elegir Nuestros Equipos?</h2>
+          <p class="text-xl text-gray-600">Características que marcan la diferencia</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Zap class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Máxima Eficiencia</h3>
+            <p class="text-gray-600">
+              Equipos con clasificación energética A++ y A+++. Ahorra hasta un 60% en tu factura eléctrica 
+              con la tecnología inverter de última generación.
+            </p>
+          </div>
+
+          <div class="text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Shield class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Garantía Extendida</h3>
+            <p class="text-gray-600">
+              Todos nuestros equipos incluyen garantía oficial del fabricante más nuestra garantía 
+              adicional de instalación por 3 años completos.
+            </p>
+          </div>
+
+          <div class="text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Award class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Tecnología Smart</h3>
+            <p class="text-gray-600">
+              Control total desde tu smartphone. WiFi integrado, programación inteligente y 
+              compatibilidad con asistentes virtuales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financing Section -->
+    <section class="section-padding bg-gradient-to-br from-primary-50 to-secondary-50">
+      <div class="container-custom">
+        <div class="text-center mb-12 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Financiación Sin Intereses</h2>
+          <p class="text-xl text-gray-600">Disfruta ya de tu nuevo aire acondicionado</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card p-8 text-center animate-on-scroll">
+            <div class="text-4xl font-bold text-primary-600 mb-2">3</div>
+            <div class="text-lg font-semibold text-gray-900 mb-2">meses</div>
+            <p class="text-gray-600">0% intereses</p>
+          </div>
+
+          <div class="card p-8 text-center animate-on-scroll">
+            <div class="text-4xl font-bold text-primary-600 mb-2">6</div>
+            <div class="text-lg font-semibold text-gray-900 mb-2">meses</div>
+            <p class="text-gray-600">0% intereses</p>
+          </div>
+
+          <div class="card p-8 text-center animate-on-scroll">
+            <div class="text-4xl font-bold text-primary-600 mb-2">12</div>
+            <div class="text-lg font-semibold text-gray-900 mb-2">meses</div>
+            <p class="text-gray-600">Interés preferencial</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll">
+          <p class="text-gray-600 mb-6">Consulta condiciones y requisitos con nuestros asesores</p>
+          <a href="#contacto" class="btn-primary text-lg px-8 py-4">Solicitar Información</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-white" id="contacto">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Solicita tu Presupuesto</h2>
+          <p class="text-xl text-gray-600">
+            Nuestros expertos te ayudarán a elegir el equipo perfecto para tus necesidades
+          </p>
+        </div>
+
+        <div class="animate-on-scroll">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

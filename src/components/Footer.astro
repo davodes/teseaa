@@ -1,0 +1,92 @@
+---
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-astro';
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="container-custom section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">T</span>
+          </div>
+          <span class="text-xl font-bold">TESEAA</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed">
+          Expertos en climatización con más de 15 años de experiencia. Ofrecemos soluciones integrales para tu hogar y empresa.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 bg-primary-600 hover:bg-primary-700 rounded-lg flex items-center justify-center transition-colors">
+            <Facebook class="w-5 h-5" />
+          </a>
+          <a href="#" class="w-10 h-10 bg-primary-600 hover:bg-primary-700 rounded-lg flex items-center justify-center transition-colors">
+            <Instagram class="w-5 h-5" />
+          </a>
+          <a href="#" class="w-10 h-10 bg-primary-600 hover:bg-primary-700 rounded-lg flex items-center justify-center transition-colors">
+            <Linkedin class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold">Servicios</h3>
+        <ul class="space-y-2">
+          <li><a href="/servicios/venta" class="text-gray-300 hover:text-white transition-colors">Venta de Equipos</a></li>
+          <li><a href="/servicios/instalacion" class="text-gray-300 hover:text-white transition-colors">Instalación</a></li>
+          <li><a href="/servicios/mantenimiento" class="text-gray-300 hover:text-white transition-colors">Mantenimiento</a></li>
+          <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">Todos los Servicios</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold">Enlaces Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
+          <li><a href="/nosotros" class="text-gray-300 hover:text-white transition-colors">Sobre Nosotros</a></li>
+          <li><a href="/contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold">Contacto</h3>
+        <div class="space-y-3">
+          <div class="flex items-start space-x-3">
+            <MapPin class="w-5 h-5 text-primary-400 mt-0.5" />
+            <div>
+              <p class="text-gray-300">Calle Principal 123</p>
+              <p class="text-gray-300">28001 Madrid, España</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <Phone class="w-5 h-5 text-primary-400" />
+            <a href="tel:+34123456789" class="text-gray-300 hover:text-white transition-colors">+34 123 456 789</a>
+          </div>
+          <div class="flex items-center space-x-3">
+            <Mail class="w-5 h-5 text-primary-400" />
+            <a href="mailto:info@teseaa.com" class="text-gray-300 hover:text-white transition-colors">info@teseaa.com</a>
+          </div>
+        </div>
+        <div class="pt-2">
+          <p class="text-sm text-gray-400">Horario de Atención:</p>
+          <p class="text-gray-300">Lun - Vie: 8:00 - 18:00</p>
+          <p class="text-gray-300">Sáb: 9:00 - 14:00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-sm">© 2024 TESEAA. Todos los derechos reservados.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Política de Privacidad</a>
+        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Términos de Servicio</a>
+        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

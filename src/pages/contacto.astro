@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from 'lucide-astro';
+---
+
+<BaseLayout 
+  title="Contacto"
+  description="Contacta con TESEAA para presupuestos sin compromiso. Teléfono, email, ubicación y formulario de contacto. Servicio de emergencias 24/7."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-600 to-secondary-600">
+      <div class="container-custom text-center text-white">
+        <div class="animate-on-scroll">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">Contáctanos</h1>
+          <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+            Estamos aquí para ayudarte. Solicita tu presupuesto sin compromiso o consulta 
+            cualquier duda sobre climatización. Te respondemos en menos de 24 horas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="card p-8 text-center animate-on-scroll hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Phone class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Llámanos</h3>
+            <p class="text-gray-600 mb-6">
+              Para consultas urgentes o solicitar presupuesto inmediato. 
+              Atendemos de lunes a viernes de 8:00 a 18:00h.
+            </p>
+            <div class="space-y-2">
+              <a href="tel:+34123456789" class="block text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
+                +34 123 456 789
+              </a>
+              <p class="text-sm text-gray-500">Tarifa normal</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <p class="text-sm font-semibold text-red-600">🚨 Emergencias 24/7</p>
+              <p class="text-xs text-gray-500">Mismo número - Tarifa especial</p>
+            </div>
+          </div>
+
+          <div class="card p-8 text-center animate-on-scroll hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Mail class="w-8 h-8 text-green-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Escríbenos</h3>
+            <p class="text-gray-600 mb-6">
+              Para presupuestos detallados, consultas técnicas o información general. 
+              Te respondemos en menos de 24 horas.
+            </p>
+            <div class="space-y-2">
+              <a href="mailto:info@teseaa.com" class="block text-xl font-bold text-green-600 hover:text-green-700 transition-colors">
+                info@teseaa.com
+              </a>
+              <p class="text-sm text-gray-500">Respuesta en 24h</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <p class="text-sm font-semibold text-green-600">📧 También WhatsApp</p>
+              <p class="text-xs text-gray-500">+34 123 456 789</p>
+            </div>
+          </div>
+
+          <div class="card p-8 text-center animate-on-scroll hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <MapPin class="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Visítanos</h3>
+            <p class="text-gray-600 mb-6">
+              Ven a conocer nuestras oficinas y showroom. Podrás ver equipos en funcionamiento 
+              y recibir asesoramiento personalizado.
+            </p>
+            <div class="space-y-1 text-gray-700">
+              <p class="font-medium">Calle Principal 123</p>
+              <p>28001 Madrid</p>
+              <p>España</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <p class="text-sm font-semibold text-blue-600">🚗 Aparcamiento gratuito</p>
+              <p class="text-xs text-gray-500">Fácil acceso en transporte público</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="text-center mb-8">
+            <Clock class="w-12 h-12 text-primary-600 mx-auto mb-4" />
+            <h3 class="text-2xl font-semibold text-gray-900">Horario de Atención</h3>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="text-center">
+              <h4 class="font-semibold text-gray-900 mb-3">Oficina y Showroom</h4>
+              <div class="space-y-2 text-gray-600">
+                <div class="flex justify-between items-center">
+                  <span>Lunes - Viernes</span>
+                  <span class="font-medium">8:00 - 18:00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span>Sábados</span>
+                  <span class="font-medium">9:00 - 14:00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span>Domingos</span>
+                  <span class="font-medium text-red-600">Cerrado</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <h4 class="font-semibold text-gray-900 mb-3">Servicio Técnico</h4>
+              <div class="space-y-2 text-gray-600">
+                <div class="flex justify-between items-center">
+                  <span>Lunes - Viernes</span>
+                  <span class="font-medium">8:00 - 20:00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span>Sábados</span>
+                  <span class="font-medium">9:00 - 15:00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span>Domingos</span>
+                  <span class="font-medium">Solo emergencias</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <h4 class="font-semibold text-gray-900 mb-3">Emergencias 24/7</h4>
+              <div class="space-y-2">
+                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <p class="text-red-800 font-semibold">🚨 Servicio de Urgencias</p>
+                  <p class="text-red-600 text-sm">Disponible 24 horas, 365 días al año</p>
+                  <p class="text-red-600 text-sm">Tarifa especial aplicable</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-padding bg-gray-50">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <MessageCircle class="w-16 h-16 text-primary-600 mx-auto mb-6" />
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Solicita tu Presupuesto</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Completa el formulario con los detalles de tu proyecto y te enviaremos un presupuesto 
+            personalizado en menos de 24 horas. Sin compromiso.
+          </p>
+        </div>
+
+        <div class="animate-on-scroll">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Encuéntranos</h2>
+          <p class="text-xl text-gray-600">Ubicación de nuestras oficinas y showroom</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2 animate-on-scroll">
+            <div class="card p-0 overflow-hidden h-96">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.4266264711147!2d-3.7037901847511907!3d40.41677597936213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287c8a28a965%3A0x8b7d0e87b32677a0!2sPuerta%20del%20Sol%2C%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1645123456789!5m2!1sen!2sus"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de TESEAA">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="space-y-6 animate-on-scroll">
+            <div class="card p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Cómo Llegar</h3>
+              
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">🚗 En Coche</h4>
+                  <p class="text-sm text-gray-600">
+                    Fácil acceso desde la M-30. Aparcamiento gratuito disponible. 
+                    Salida 7 dirección centro.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">🚇 Metro</h4>
+                  <p class="text-sm text-gray-600">
+                    Línea 1 y 2 - Estación Sol (2 min andando)<br>
+                    Línea 3 - Estación Callao (5 min andando)
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">🚌 Autobús</h4>
+                  <p class="text-sm text-gray-600">
+                    Líneas 5, 15, 20, 51, 52, 53<br>
+                    Parada: Puerta del Sol
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Información Adicional</h3>
+              
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center space-x-2">
+                  <CheckCircle class="w-4 h-4 text-green-500" />
+                  <span>Acceso para personas con movilidad reducida</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <CheckCircle class="w-4 h-4 text-green-500" />
+                  <span>WiFi gratuito en nuestras instalaciones</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <CheckCircle class="w-4 h-4 text-green-500" />
+                  <span>Showroom con equipos funcionando</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <CheckCircle class="w-4 h-4 text-green-500" />
+                  <span>Zona de espera climatizada</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-gray-50">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+          <p class="text-xl text-gray-600">Las respuestas a las consultas más comunes</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="font-semibold text-gray-900 mb-3">¿Cuánto tarda en llegar un técnico?</h3>
+            <p class="text-gray-600 text-sm">
+              En horario normal, entre 2-4 horas para emergencias y 24-48h para instalaciones programadas. 
+              Servicio de emergencias disponible 24/7.
+            </p>
+          </div>
+
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="font-semibold text-gray-900 mb-3">¿El presupuesto tiene algún coste?</h3>
+            <p class="text-gray-600 text-sm">
+              No, todos nuestros presupuestos son completamente gratuitos y sin compromiso. 
+              Solo pagas si decides contratar nuestros servicios.
+            </p>
+          </div>
+
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="font-semibold text-gray-900 mb-3">¿Qué zona de servicio cubrís?</h3>
+            <p class="text-gray-600 text-sm">
+              Atendemos toda la Comunidad de Madrid y pueblos colindantes en un radio de 50km. 
+              Consulta disponibilidad para otras zonas.
+            </p>
+          </div>
+
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="font-semibold text-gray-900 mb-3">¿Ofrecéis garantía en vuestros trabajos?</h3>
+            <p class="text-gray-600 text-sm">
+              Sí, ofrecemos 3 años de garantía en instalaciones y 6 meses en reparaciones, 
+              además de la garantía oficial del fabricante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

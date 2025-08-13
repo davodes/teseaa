@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { Wrench, Clock, Shield, CheckCircle, Users, Award, Zap } from 'lucide-astro';
+---
+
+<BaseLayout 
+  title="Instalación de Aire Acondicionado"
+  description="Instalación profesional de sistemas de climatización por técnicos certificados. Servicio rápido, limpio y con garantía de 3 años."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-600 to-secondary-600">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+          <div class="animate-on-scroll">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Instalación Profesional</h1>
+            <p class="text-xl text-gray-200 mb-8">
+              Instalación certificada por técnicos especializados con más de 15 años de experiencia. 
+              Servicio rápido, limpio y con todas las garantías.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#proceso" class="btn-accent text-lg px-8 py-4">Ver Proceso</a>
+              <a href="#contacto" class="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4">
+                Solicitar Instalación
+              </a>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="glass rounded-2xl p-8 text-center">
+              <Wrench class="w-16 h-16 text-accent-400 mx-auto mb-4" />
+              <h3 class="text-2xl font-bold mb-4">Instalación desde</h3>
+              <div class="text-5xl font-bold text-accent-400 mb-2">150€</div>
+              <p class="text-gray-200">Incluye mano de obra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Por Qué Elegir Nuestra Instalación?</h2>
+          <p class="text-xl text-gray-600">Garantizamos un servicio profesional y de calidad</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card p-6 text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Clock class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Instalación Rápida</h3>
+            <p class="text-gray-600">
+              Instalamos tu equipo en 24-48 horas desde la confirmación del pedido. 
+              Servicio express disponible para casos urgentes.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-500">
+              <li>• Planificación detallada</li>
+              <li>• Equipo completo de herramientas</li>
+              <li>• Sin esperas innecesarias</li>
+            </ul>
+          </div>
+
+          <div class="card p-6 text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Users class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Técnicos Certificados</h3>
+            <p class="text-gray-600">
+              Todo nuestro personal está certificado y cuenta con seguro de responsabilidad civil. 
+              Formación continua en las últimas tecnologías.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-500">
+              <li>• Certificación F-Gas</li>
+              <li>• Carnet de instalador autorizado</li>
+              <li>• Seguro de responsabilidad</li>
+            </ul>
+          </div>
+
+          <div class="card p-6 text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Shield class="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">3 Años de Garantía</h3>
+            <p class="text-gray-600">
+              Garantía completa de 3 años en mano de obra más la garantía oficial del fabricante. 
+              Tranquilidad total para tu inversión.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-500">
+              <li>• Garantía en mano de obra</li>
+              <li>• Garantía del fabricante</li>
+              <li>• Servicio post-instalación</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding bg-gray-50" id="proceso">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Proceso de Instalación</h2>
+          <p class="text-xl text-gray-600">Cada paso planificado para garantizar el éxito</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center animate-on-scroll">
+            <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-white">1</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Visita Técnica</h3>
+            <p class="text-gray-600 text-sm">
+              Evaluamos el espacio, medimos distancias y planificamos la instalación óptima. 
+              Identificamos posibles complicaciones.
+            </p>
+          </div>
+
+          <div class="text-center animate-on-scroll">
+            <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-white">2</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Preparación</h3>
+            <p class="text-gray-600 text-sm">
+              Protegemos tu hogar con plásticos y fundas. Preparamos todas las herramientas 
+              y materiales necesarios para la instalación.
+            </p>
+          </div>
+
+          <div class="text-center animate-on-scroll">
+            <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-white">3</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Instalación</h3>
+            <p class="text-gray-600 text-sm">
+              Montaje de unidades, conexionado eléctrico, soldaduras, vacío y carga de gas. 
+              Todo siguiendo normativas oficiales.
+            </p>
+          </div>
+
+          <div class="text-center animate-on-scroll">
+            <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-white">4</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Puesta en Marcha</h3>
+            <p class="text-gray-600 text-sm">
+              Pruebas de funcionamiento, configuración inicial y explicación del uso. 
+              Limpieza completa del área de trabajo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Included -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">¿Qué Incluye Nuestro Servicio?</h2>
+            
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <CheckCircle class="w-6 h-6 text-green-500 mt-1" />
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Instalación Completa</h3>
+                  <p class="text-gray-600">Montaje de unidades interior y exterior, conexiones eléctricas y de gas, soldaduras profesionales.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <CheckCircle class="w-6 h-6 text-green-500 mt-1" />
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Materiales Incluidos</h3>
+                  <p class="text-gray-600">Tubería de cobre, cable eléctrico, soportes, tornillería y todos los materiales hasta 5 metros lineales.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <CheckCircle class="w-6 h-6 text-green-500 mt-1" />
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Pruebas de Funcionamiento</h3>
+                  <p class="text-gray-600">Verificación completa del sistema, pruebas de presión, vacío y carga de gas refrigerante.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <CheckCircle class="w-6 h-6 text-green-500 mt-1" />
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Limpieza Post-Instalación</h3>
+                  <p class="text-gray-600">Recogida de todos los materiales, limpieza del área de trabajo y retirada de embalajes.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <CheckCircle class="w-6 h-6 text-green-500 mt-1" />
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Certificados Oficiales</h3>
+                  <p class="text-gray-600">Certificado de instalación, manual de usuario y registro de garantía del fabricante.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="animate-on-scroll">
+            <div class="card p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Instalaciones Especializadas</h3>
+              
+              <div class="space-y-4">
+                <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                  <div>
+                    <h4 class="font-medium text-gray-900">Split Pared</h4>
+                    <p class="text-sm text-gray-500">Instalación estándar</p>
+                  </div>
+                  <span class="font-bold text-primary-600">Desde 150€</span>
+                </div>
+
+                <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                  <div>
+                    <h4 class="font-medium text-gray-900">Multi Split</h4>
+                    <p class="text-sm text-gray-500">2-5 unidades interiores</p>
+                  </div>
+                  <span class="font-bold text-primary-600">Desde 350€</span>
+                </div>
+
+                <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                  <div>
+                    <h4 class="font-medium text-gray-900">Por Conductos</h4>
+                    <p class="text-sm text-gray-500">Sistema centralizado</p>
+                  </div>
+                  <span class="font-bold text-primary-600">Desde 450€</span>
+                </div>
+
+                <div class="flex items-center justify-between py-3">
+                  <div>
+                    <h4 class="font-medium text-gray-900">Cassette</h4>
+                    <p class="text-sm text-gray-500">Para falso techo</p>
+                  </div>
+                  <span class="font-bold text-primary-600">Desde 200€</span>
+                </div>
+              </div>
+
+              <div class="mt-6 p-4 bg-primary-50 rounded-lg">
+                <p class="text-sm text-primary-800">
+                  <strong>Nota:</strong> Los precios incluyen mano de obra y materiales estándar. 
+                  Trabajos especiales pueden tener coste adicional.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantees Section -->
+    <section class="section-padding bg-gradient-to-br from-primary-600 to-secondary-600">
+      <div class="container-custom text-white text-center">
+        <div class="animate-on-scroll">
+          <h2 class="text-3xl font-bold mb-8">Nuestras Garantías</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="glass rounded-lg p-6">
+              <Award class="w-12 h-12 text-accent-400 mx-auto mb-4" />
+              <h3 class="text-lg font-semibold mb-2">Trabajo Garantizado</h3>
+              <p class="text-gray-200">3 años de garantía completa en toda la instalación y mano de obra</p>
+            </div>
+
+            <div class="glass rounded-lg p-6">
+              <Zap class="w-12 h-12 text-accent-400 mx-auto mb-4" />
+              <h3 class="text-lg font-semibold mb-2">Técnicos Expertos</h3>
+              <p class="text-gray-200">Personal certificado con más de 10 años de experiencia promedio</p>
+            </div>
+
+            <div class="glass rounded-lg p-6">
+              <CheckCircle class="w-12 h-12 text-accent-400 mx-auto mb-4" />
+              <h3 class="text-lg font-semibold mb-2">Satisfacción 100%</h3>
+              <p class="text-gray-200">Si no quedas satisfecho, solucionamos cualquier problema sin coste</p>
+            </div>
+          </div>
+
+          <a href="#contacto" class="btn-accent text-lg px-8 py-4">Solicitar Instalación</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-white" id="contacto">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Solicita tu Instalación</h2>
+          <p class="text-xl text-gray-600">
+            Programa tu instalación y disfruta del máximo confort en 24-48 horas
+          </p>
+        </div>
+
+        <div class="animate-on-scroll">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

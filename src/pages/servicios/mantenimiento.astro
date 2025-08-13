@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { Settings, Calendar, Shield, CheckCircle, Zap, Phone, AlertTriangle } from 'lucide-astro';
+---
+
+<BaseLayout 
+  title="Mantenimiento de Aire Acondicionado"
+  description="Servicio completo de mantenimiento para sistemas de climatización. Preventivo, correctivo y contratos anuales. Emergencias 24/7."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-600 to-secondary-600">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+          <div class="animate-on-scroll">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Mantenimiento Profesional</h1>
+            <p class="text-xl text-gray-200 mb-8">
+              Mantén tu sistema de climatización funcionando al máximo rendimiento. 
+              Servicio preventivo y correctivo con contratos personalizados.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#servicios" class="btn-accent text-lg px-8 py-4">Ver Servicios</a>
+              <a href="tel:+34123456789" class="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4 flex items-center">
+                <Phone class="mr-2 w-5 h-5" />
+                Emergencias 24/7
+              </a>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="glass rounded-2xl p-8 text-center">
+              <Settings class="w-16 h-16 text-accent-400 mx-auto mb-4" />
+              <h3 class="text-2xl font-bold mb-4">Desde</h3>
+              <div class="text-5xl font-bold text-accent-400 mb-2">89€</div>
+              <p class="text-gray-200">Mantenimiento completo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Maintenance Section -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Por Qué Es Importante el Mantenimiento?</h2>
+          <p class="text-xl text-gray-600">Un sistema bien mantenido es más eficiente, duradero y saludable</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card p-6 text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Zap class="w-8 h-8 text-green-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Ahorro Energético</h3>
+            <p class="text-gray-600 mb-4">
+              Un equipo bien mantenido consume hasta un 30% menos energía. 
+              Filtros limpios y sistema optimizado reducen significativamente tu factura.
+            </p>
+            <div class="text-2xl font-bold text-green-600">-30%</div>
+            <div class="text-sm text-gray-500">Reducción del consumo</div>
+          </div>
+
+          <div class="card p-6 text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <Shield class="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Mayor Durabilidad</h3>
+            <p class="text-gray-600 mb-4">
+              El mantenimiento preventivo alarga la vida útil de tu equipo hasta 5 años más. 
+              Evita averías costosas y reemplazos prematuros.
+            </p>
+            <div class="text-2xl font-bold text-blue-600">+5</div>
+            <div class="text-sm text-gray-500">Años de vida útil</div>
+          </div>
+
+          <div class="card p-6 text-center animate-on-scroll">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <CheckCircle class="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Aire Más Saludable</h3>
+            <p class="text-gray-600 mb-4">
+              Filtros limpios eliminan bacterias, virus, polen y alérgenos. 
+              Fundamental para personas con problemas respiratorios.
+            </p>
+            <div class="text-2xl font-bold text-purple-600">99%</div>
+            <div class="text-sm text-gray-500">Filtrado de impurezas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding bg-gray-50" id="servicios">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestros Servicios de Mantenimiento</h2>
+          <p class="text-xl text-gray-600">Soluciones adaptadas a cada necesidad</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Preventive Maintenance -->
+          <div class="card p-8 animate-on-scroll">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                <Calendar class="w-6 h-6 text-green-600" />
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Mantenimiento Preventivo</h3>
+                <p class="text-gray-600">Evita averías y optimiza el rendimiento</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Limpieza completa de filtros</h4>
+                  <p class="text-sm text-gray-600">Interior y exterior, eliminando polvo y bacterias</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Revisión del gas refrigerante</h4>
+                  <p class="text-sm text-gray-600">Verificación de presiones y posibles fugas</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Limpieza del intercambiador</h4>
+                  <p class="text-sm text-gray-600">Optimización del rendimiento térmico</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Revisión eléctrica</h4>
+                  <p class="text-sm text-gray-600">Conexiones, consumos y parámetros de funcionamiento</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Informe detallado</h4>
+                  <p class="text-sm text-gray-600">Estado del equipo y recomendaciones</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t pt-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-lg font-semibold text-gray-900">Precio por visita</span>
+                <span class="text-3xl font-bold text-primary-600">89€</span>
+              </div>
+              <button class="btn-primary w-full">Programar Mantenimiento</button>
+            </div>
+          </div>
+
+          <!-- Corrective Maintenance -->
+          <div class="card p-8 animate-on-scroll">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                <AlertTriangle class="w-6 h-6 text-red-600" />
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Mantenimiento Correctivo</h3>
+                <p class="text-gray-600">Reparación de averías y problemas</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Diagnóstico completo</h4>
+                  <p class="text-sm text-gray-600">Identificación precisa del problema</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Reparación profesional</h4>
+                  <p class="text-sm text-gray-600">Uso de repuestos originales</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Recarga de gas</h4>
+                  <p class="text-sm text-gray-600">Si es necesario, con gases ecológicos</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Pruebas de funcionamiento</h4>
+                  <p class="text-sm text-gray-600">Verificación completa post-reparación</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <CheckCircle class="w-5 h-5 text-green-500 mt-0.5" />
+                <div>
+                  <h4 class="font-semibold text-gray-900">Garantía de reparación</h4>
+                  <p class="text-sm text-gray-600">6 meses en mano de obra</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t pt-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-lg font-semibold text-gray-900">Desde</span>
+                <span class="text-3xl font-bold text-primary-600">120€</span>
+              </div>
+              <button class="btn-primary w-full">Solicitar Reparación</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Annual Contracts -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Contratos de Mantenimiento Anual</h2>
+          <p class="text-xl text-gray-600">La tranquilidad de tener tu equipo siempre en perfectas condiciones</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Basic Plan -->
+          <div class="card p-8 text-center animate-on-scroll">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan Básico</h3>
+            <div class="text-4xl font-bold text-primary-600 mb-2">149€</div>
+            <div class="text-gray-500 mb-6">por año</div>
+            
+            <ul class="space-y-3 mb-8 text-left">
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">2 revisiones anuales</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Limpieza de filtros</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Revisión básica del sistema</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">10% descuento en reparaciones</span>
+              </li>
+            </ul>
+            
+            <button class="btn-secondary w-full">Contratar Plan</button>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="card p-8 text-center animate-on-scroll border-2 border-primary-500 relative">
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="bg-primary-500 text-white px-4 py-1 rounded-full text-sm">Más Popular</span>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan Premium</h3>
+            <div class="text-4xl font-bold text-primary-600 mb-2">249€</div>
+            <div class="text-gray-500 mb-6">por año</div>
+            
+            <ul class="space-y-3 mb-8 text-left">
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">3 revisiones anuales</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Limpieza completa del sistema</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Revisión de gas refrigerante</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">20% descuento en reparaciones</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Servicio prioritario</span>
+              </li>
+            </ul>
+            
+            <button class="btn-primary w-full">Contratar Plan</button>
+          </div>
+
+          <!-- VIP Plan -->
+          <div class="card p-8 text-center animate-on-scroll">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan VIP</h3>
+            <div class="text-4xl font-bold text-primary-600 mb-2">399€</div>
+            <div class="text-gray-500 mb-6">por año</div>
+            
+            <ul class="space-y-3 mb-8 text-left">
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">4 revisiones anuales</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Mantenimiento integral</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Emergencias 24/7 incluidas</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">30% descuento en reparaciones</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <CheckCircle class="w-4 h-4 text-green-500" />
+                <span class="text-sm">Repuestos menores incluidos</span>
+              </li>
+            </ul>
+            
+            <button class="btn-accent w-full">Contratar Plan</button>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll">
+          <div class="bg-accent-50 border border-accent-200 rounded-lg p-6 max-w-4xl mx-auto">
+            <h3 class="text-lg font-semibold text-accent-800 mb-2">🚨 Servicio de Emergencias 24/7</h3>
+            <p class="text-accent-700">
+              Para urgencias fuera del horario normal, disponemos de servicio de emergencias. 
+              <strong>Llama al +34 123 456 789</strong> - Tarifas especiales aplicables.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-gray-50" id="contacto">
+      <div class="container-custom">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Programa tu Mantenimiento</h2>
+          <p class="text-xl text-gray-600">
+            Mantén tu sistema funcionando perfectamente. Contacta con nosotros para programar tu servicio.
+          </p>
+        </div>
+
+        <div class="animate-on-scroll">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

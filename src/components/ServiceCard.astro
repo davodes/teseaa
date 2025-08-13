@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  features: string[];
+  link: string;
+  price?: string;
+}
+
+const { title, description, icon, features, link, price } = Astro.props;
+
+// Import the appropriate icon based on the icon prop
+import { ShoppingCart, Wrench, Settings } from 'lucide-astro';
+
+const iconComponents = {
+  'shopping-cart': ShoppingCart,
+  'wrench': Wrench,
+  'settings': Settings,
+};
+
+const IconComponent = iconComponents[icon as keyof typeof iconComponents] || ShoppingCart;
+---
+
+<div class="card p-6 h-full group hover:scale-105 transition-all duration-300">
+  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg mb-6 group-hover:scale-110 transition-transform">
+    <IconComponent class="w-8 h-8 text-white" />
+  </div>
+  
+  <h3 class="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+  
+  {price && (
+    <div class="text-2xl font-bold text-primary-600 mb-3">
+      Desde <span class="text-3xl">{price}</span>
+    </div>
+  )}
+  
+  <p class="text-gray-600 mb-6 leading-relaxed">{description}</p>
+  
+  <ul class="space-y-2 mb-6 flex-grow">
+    {features.map((feature) => (
+      <li class="flex items-start space-x-2">
+        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        <span class="text-gray-700">{feature}</span>
+      </li>
+    ))}
+  </ul>
+  
+  <a href={link} class="btn-primary w-full text-center group-hover:shadow-lg">
+    Más información
+  </a>
+</div>

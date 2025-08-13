@@ -1,0 +1,108 @@
+---
+import "../styles/globals.css";
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { title, description = "TESEAA - Expertos en climatización, venta, instalación y mantenimiento de sistemas de aire acondicionado", image = "/images/og-image.jpg", canonical } = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title} | TESEAA</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="climatización, aire acondicionado, instalación, mantenimiento, venta, TESEAA" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | TESEAA`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="TESEAA" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | TESEAA`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Schema.org markup for Local Business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TESEAA",
+        "image": "https://teseaa.vercel.app/images/logo.png",
+        "description": "Expertos en climatización, venta, instalación y mantenimiento de sistemas de aire acondicionado",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Principal 123",
+          "addressLocality": "Ciudad",
+          "addressRegion": "Región",
+          "postalCode": "12345",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34 123 456 789",
+        "email": "info@teseaa.com",
+        "url": "https://teseaa.vercel.app",
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "$$",
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.4168",
+            "longitude": "-3.7038"
+          },
+          "geoRadius": "50000"
+        }
+      }
+    </script>
+    
+  </head>
+  
+  <body class="antialiased">
+    <slot />
+    
+    <!-- Scroll Animation Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>

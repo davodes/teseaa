@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { ArrowRight, CheckCircle, Star } from 'lucide-astro';
+---
+
+<BaseLayout 
+  title="Servicios"
+  description="Todos nuestros servicios de climatización: venta, instalación y mantenimiento de sistemas de aire acondicionado."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-600 to-secondary-600">
+      <div class="container-custom text-center text-white">
+        <div class="animate-on-scroll">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">Nuestros Servicios</h1>
+          <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+            Soluciones completas de climatización para hogares y empresas. 
+            Desde la venta hasta el mantenimiento, te acompañamos en todo el proceso.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="animate-on-scroll">
+            <ServiceCard
+              title="Venta de Equipos"
+              description="Amplia gama de equipos de aire acondicionado de las mejores marcas del mercado. Desde equipos domésticos hasta soluciones industriales."
+              icon="shopping-cart"
+              features={[
+                "Equipos de última tecnología",
+                "Marcas premium reconocidas",
+                "Garantía oficial del fabricante",
+                "Financiación sin intereses",
+                "Asesoramiento técnico gratuito",
+                "Entrega e instalación incluida"
+              ]}
+              link="/servicios/venta"
+              price="299€"
+            />
+          </div>
+
+          <div class="animate-on-scroll">
+            <ServiceCard
+              title="Instalación Profesional"
+              description="Instalación certificada por técnicos especializados. Servicio rápido, limpio y con todas las garantías de seguridad."
+              icon="wrench"
+              features={[
+                "Técnicos certificados y asegurados",
+                "Instalación en 24-48 horas",
+                "Limpieza completa post-instalación",
+                "Garantía de 3 años en mano de obra",
+                "Certificados de instalación oficiales",
+                "Revisión gratuita al mes"
+              ]}
+              link="/servicios/instalacion"
+              price="150€"
+            />
+          </div>
+
+          <div class="animate-on-scroll">
+            <ServiceCard
+              title="Mantenimiento y Reparación"
+              description="Mantén tu equipo funcionando al máximo rendimiento. Servicio preventivo y correctivo para alargar la vida útil."
+              icon="settings"
+              features={[
+                "Mantenimiento preventivo completo",
+                "Limpieza de filtros y unidades",
+                "Revisión de gas refrigerante",
+                "Contratos anuales con descuentos",
+                "Servicio de emergencias 24/7",
+                "Repuestos originales garantizados"
+              ]}
+              link="/servicios/mantenimiento"
+              price="89€"
+            />
+          </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="bg-gray-50 rounded-2xl p-8 mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Servicios Adicionales</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="font-semibold text-gray-900 mb-3">Consultoría Energética</h3>
+              <p class="text-gray-600 mb-4">Análisis de eficiencia energética para optimizar el consumo de tu sistema de climatización.</p>
+              <ul class="space-y-1 text-sm text-gray-500">
+                <li>• Auditoría energética completa</li>
+                <li>• Informe detallado de mejoras</li>
+                <li>• Cálculo de ahorro energético</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="font-semibold text-gray-900 mb-3">Proyectos Industriales</h3>
+              <p class="text-gray-600 mb-4">Soluciones de climatización para grandes espacios comerciales e industriales.</p>
+              <ul class="space-y-1 text-sm text-gray-500">
+                <li>• Diseño de sistemas centralizados</li>
+                <li>• Instalación de conductos</li>
+                <li>• Sistemas VRV/VRF</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="font-semibold text-gray-900 mb-3">Domótica y Control</h3>
+              <p class="text-gray-600 mb-4">Integración de sistemas inteligentes para el control automático de la climatización.</p>
+              <ul class="space-y-1 text-sm text-gray-500">
+                <li>• Control remoto vía smartphone</li>
+                <li>• Programación horaria automática</li>
+                <li>• Sensores de presencia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Process Section -->
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 mb-12">Nuestro Proceso de Trabajo</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-primary-600">1</span>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Consulta Inicial</h3>
+              <p class="text-gray-600 text-sm">Evaluamos tus necesidades y espacio para recomendarte la mejor solución.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-primary-600">2</span>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Presupuesto</h3>
+              <p class="text-gray-600 text-sm">Presupuesto detallado sin compromiso con precios transparentes y claros.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-primary-600">3</span>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Instalación</h3>
+              <p class="text-gray-600 text-sm">Instalación profesional por técnicos certificados en el menor tiempo posible.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-primary-600">4</span>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Seguimiento</h3>
+              <p class="text-gray-600 text-sm">Servicio post-venta y mantenimiento para garantizar el óptimo funcionamiento.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guarantees Section -->
+        <div class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white text-center animate-on-scroll">
+          <h2 class="text-3xl font-bold mb-6">Nuestras Garantías</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex items-center justify-center space-x-3">
+              <CheckCircle class="w-6 h-6 text-accent-400" />
+              <span class="font-medium">3 Años de Garantía</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+              <Star class="w-6 h-6 text-accent-400" />
+              <span class="font-medium">Técnicos Certificados</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+              <CheckCircle class="w-6 h-6 text-accent-400" />
+              <span class="font-medium">Servicio 24/7</span>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/contacto" class="btn-accent text-lg px-8 py-4 group">
+              Solicitar Presupuesto Gratuito
+              <ArrowRight class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
