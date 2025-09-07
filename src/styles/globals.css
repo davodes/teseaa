@@ -14,9 +14,6 @@
     line-height: 1.6;
   }
   
-  * {
-  }
-  
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold leading-tight;
   }
@@ -39,11 +36,11 @@
   }
   
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-lg hover:shadow-xl;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-primary-950 bg-gradient-to-br from-accent-400 to-yellow-400 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 hover:shadow-accent-600/25 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-primary-600 bg-white border border-primary-600 rounded-lg hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-gradient-to-br text-white from-primary-500 to-primary-700 rounded-lg hover:bg-primary-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105;
   }
   
   .btn-accent {

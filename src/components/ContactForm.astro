@@ -4,157 +4,207 @@ import { Send, Phone, Mail, MapPin } from 'lucide-astro';
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
   <!-- Contact Form -->
-  <div class="space-y-6">
+  <div>
     <div>
       <h2 class="text-3xl font-bold text-gray-900 mb-4">Solicita tu presupuesto</h2>
       <p class="text-gray-600">Completa el formulario y te contactaremos en menos de 24 horas</p>
     </div>
-    
-    <form class="space-y-6" id="contact-form">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form 
+      class="space-y-6"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="contact-form"
+    >
+      <!-- Web3Forms Key -->
+      <input type="hidden" name="access_key" value="80de4a57-7c81-46d2-aa2f-71a3f19e8d21">
+      <!-- Honeypot -->
+      <!-- <input type="checkbox" name="botcheck" class="hidden" style="display:none"> -->
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre *</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
+          <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">
+            Nombre *
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
             required
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-            placeholder="Tu nombre completo"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+            placeholder="Tu nombre"
           />
         </div>
         <div>
-          <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono *</label>
-          <input 
-            type="tel" 
-            id="phone" 
-            name="phone" 
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+            Email *
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
             required
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-            placeholder="+34 123 456 789"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+            placeholder="tu@email.com"
           />
         </div>
       </div>
-      
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          required
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-          placeholder="tu@email.com"
-        />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
+            Teléfono
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+            placeholder="+34 XXX XXX XXX"
+          />
+        </div>
+        <div>
+          <label for="service" class="block text-sm font-medium text-gray-700 mb-1">
+            Servicio de Interés
+          </label>
+          <select
+            id="service"
+            name="service"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+          >
+            <option value="">Selecciona un servicio</option>
+            <option value="venta">Venta de equipos</option>
+            <option value="instalacion">Instalación</option>
+            <option value="mantenimiento">Mantenimiento</option>
+            <option value="reparacion">Reparación</option>
+            <option value="consultoria">Consultoría</option>
+          </select>
+        </div>
       </div>
-      
+
       <div>
-        <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label>
-        <select 
-          id="service" 
-          name="service"
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-        >
-          <option value="">Selecciona un servicio</option>
-          <option value="venta">Venta de equipos</option>
-          <option value="instalacion">Instalación</option>
-          <option value="mantenimiento">Mantenimiento</option>
-          <option value="reparacion">Reparación</option>
-          <option value="consultoria">Consultoría</option>
-        </select>
-      </div>
-      
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
-        <textarea 
-          id="message" 
-          name="message" 
-          rows="4" 
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
+          Mensaje *
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
           required
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-          placeholder="Describe tu proyecto o necesidad..."
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+          placeholder="Cuéntanos sobre tu proyecto..."
         ></textarea>
       </div>
-      
-      <div class="flex items-start space-x-3">
-        <input 
-          type="checkbox" 
-          id="privacy" 
-          name="privacy" 
-          required
-          class="mt-1 w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
-        />
-        <label for="privacy" class="text-sm text-gray-600">
-          Acepto la <a href="#" class="text-primary-600 hover:underline">política de privacidad</a> y el tratamiento de mis datos personales *
-        </label>
+
+      <div class="flex items-start">
+        <div class="flex items-center h-5">
+          <input
+            id="privacy"
+            name="privacy"
+            type="checkbox"
+            required
+            class="w-4 h-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded transition-colors duration-200"
+          />
+        </div>
+        <div class="ml-3 text-[.8rem]">
+          <label for="privacy" class="text-gray-600">
+            Acepto la <a href="#" class="text-primary-600 hover:text-primary-700">política de privacidad</a> y el tratamiento de mis datos personales. *
+          </label>
+        </div>
       </div>
-      
-      <button type="submit" class="btn-primary w-full group">
-        <Send class="mr-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-        Enviar solicitud
+      <!-- hCaptcha -->
+      <div class="h-captcha" data-captcha="true"></div>
+
+      <!-- Redirección opcional tras envío -->
+      <!-- <input type="hidden" name="redirect" value="https://tusitio.com/gracias" /> -->
+
+      <button
+        type="submit"
+        class="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white py-3 px-6 rounded-lg font-medium hover:from-primary-700 hover:to-primary-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+      >
+        Enviar mensaje
       </button>
     </form>
+
+    <!-- Mensaje dinámico -->
+    <p id="form-status" class="mt-4 text-center text-sm text-gray-700"></p>
+
+  <!-- hCaptcha JS -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    const form = document.querySelector<HTMLFormElement>(
+      'form[action="https://api.web3forms.com/submit"]'
+    );
+    const status = document.getElementById(
+      "form-status"
+    ) as HTMLParagraphElement | null;
+
+    if (form && status) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        status.textContent = "Enviando...";
+
+        const formData = new FormData(form);
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+
+          if (response.ok) {
+            status.textContent = "Mensaje enviado correctamente.";
+            form.reset();
+          } else {
+            status.textContent =
+              "Error al enviar el mensaje. Intenta nuevamente.";
+          }
+        } catch {
+          status.textContent = "Error de conexión. Revisa tu red.";
+        }
+      });
+    }
+  </script>
   </div>
 
-  <!-- Contact Info -->
+  <!-- Map and Info -->
   <div class="space-y-8">
-    <!-- Contact Cards -->
-    <div class="space-y-4">
-      <div class="card p-6 flex items-start space-x-4">
-        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-          <Phone class="w-6 h-6 text-primary-600" />
-        </div>
-        <div>
-          <h3 class="font-semibold text-gray-900 mb-1">Teléfono</h3>
-          <p class="text-gray-600 mb-2">Llamanos para consultas urgentes</p>
-          <a href="tel:954647966" class="text-primary-600 font-medium hover:underline">+34 954 647 966</a>
-        </div>
-      </div>
-
-      <div class="card p-6 flex items-start space-x-4">
-        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-          <Mail class="w-6 h-6 text-primary-600" />
-        </div>
-        <div>
-          <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
-          <p class="text-gray-600 mb-2">Escríbenos para presupuestos detallados</p>
-          <a href="mailto:info@teseaa.com" class="text-primary-600 font-medium hover:underline">info@teseaa.com</a>
-        </div>
-      </div>
-
-      <div class="card p-6 flex items-start space-x-4">
-        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-          <MapPin class="w-6 h-6 text-primary-600" />
-        </div>
-        <div>
-          <h3 class="font-semibold text-gray-900 mb-1">Ubicación</h3>
-          <p class="text-gray-600 mb-2">Visítanos en nuestras oficinas</p>
-          <p class="text-gray-700">Calle Principal 123<br>28001 Madrid, España</p>
-        </div>
-      </div>
+    <div>
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">Nuestra ubicación</h3>
+      <div class="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1960347824506!2d-5.9729702236005755!3d37.3781049349097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126f16a6f7441d%3A0xcda79dd8203e3a5c!2sTeseaa!5e1!3m2!1ses!2ses!4v1757242433157!5m2!1ses!2ses"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        title="Ubicación de Teseaa"
+        class="w-full h-full"
+      ></iframe>
     </div>
-
-    <!-- Hours -->
-    <div class="card p-6">
-      <h3 class="font-semibold text-gray-900 mb-4">Horario de Atención</h3>
-      <div class="space-y-2">
-        <div class="flex justify-between">
-          <span class="text-gray-600">Lunes - Viernes</span>
-          <span class="font-medium">8:00 - 18:00</span>
+    </div>
+    
+    <div class="bg-white rounded-2xl mt-0">
+      <h4 class="text-xl font-semibold text-gray-900 mb-4">Información de contacto</h4>
+      <div class="space-y-4">
+        <div class="flex items-center space-x-3">
+          <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <a href="tel:954647966" class="text-gray-700">954 647 966</a>
         </div>
-        <div class="flex justify-between">
-          <span class="text-gray-600">Sábados</span>
-          <span class="font-medium">9:00 - 14:00</span>
+        <div class="flex items-center space-x-3">
+          <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+          <a href="mailto:teseaa@teseaa.com" class="text-gray-700">teseaa@teseaa.com</a>
         </div>
-        <div class="flex justify-between">
-          <span class="text-gray-600">Domingos</span>
-          <span class="font-medium text-red-600">Cerrado</span>
+        <div class="flex items-center space-x-3">
+          <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-gray-700">C/ Santa María Mazzarello, local 7 – 41005 (Sevilla)</span>
         </div>
-      </div>
-      <div class="mt-4 p-3 bg-accent-50 rounded-lg border border-accent-200">
-        <p class="text-sm text-accent-800">
-          <strong>Emergencias 24/7:</strong> Para averías urgentes, llama al +34 123 456 789
-        </p>
       </div>
     </div>
   </div>

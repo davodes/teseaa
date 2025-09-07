@@ -4,17 +4,34 @@ import { Menu, X, Phone, Mail } from 'lucide-astro';
 
 <header id="header" class="fixed top-0 left-0 right-0 transition-all duration-300 bg-white/[var(--bg-opacity)] [--bg-opacity:70%] backdrop-blur-md border-b border-black/5 overflow-visible z-[99999] header-animate w-full">
 
+  <!-- PreNav -->
+  <div class="hidden lg:flex justify-between bg-primary-700 w-full py-2 text-white text-sm">
+    <div class="container-custom md:container-width flex justify-between w-full">
+      <div class="flex">
+        <a>Bienvenido a Teseaa</a>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="tel:954647966" class="hover:underline underline-offset-4 flex items-center gap-1" aria-label="Clientes">
+          <Phone class="w-3 h-3" /> 954 647 966
+        </a>
+        <a href="mailto:teseaa@teseaa.com" class="hover:underline underline-offset-4 flex items-center gap-1" aria-label="Blog">
+          <Mail class="w-3 h-3" /> teseaa@teseaa.com
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="container-custom">
 
     <nav class="flex items-center justify-between py-4">
       
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-2">
-        <span class="text-xl font-bold text-gray-900">Teseaa</span>
+        <img src="/Logo-Teseaa.jpg" alt="TESEAA Logo" class="w-36 logo" />
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden lg:flex items-center space-x-8">
+      <div class="hidden lg:flex items-center space-x-10">
         <a href="/" class="nav-link">Inicio</a>
         <div class="relative group">
           <a href="/servicios" class="nav-link flex items-center">
@@ -31,17 +48,13 @@ import { Menu, X, Phone, Mail } from 'lucide-astro';
             </div>
           </div>
         </div>
-        <a href="/nosotros" class="nav-link">Nosotros</a>
+        <a href="/nosotros" class="nav-link">Sobre nosotros</a>
         <a href="/contacto" class="nav-link">Contacto</a>
       </div>
 
       <!-- Contact Info -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="tel:954647966" class="flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors">
-          <Phone class="w-4 h-4" />
-          <span class="text-sm font-medium">+34 954 647 966</span>
-        </a>
-        <a href="/contacto" class="btn-primary">Contactar</a>
+        <a href="/contacto" class="btn-secondary">Contactar</a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -94,6 +107,11 @@ import { Menu, X, Phone, Mail } from 'lucide-astro';
   
   #header.scrolled .nav-link {
     @apply text-gray-600 hover:text-primary-600;
+  }
+
+  .logo {
+    mix-blend-mode: multiply;
+    background-color: white;
   }
 </style>
 
